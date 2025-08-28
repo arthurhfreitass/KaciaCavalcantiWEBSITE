@@ -696,6 +696,7 @@ h1, h2, h3, h4 {
     /* Menu Mobile - overlay fullscreen */
     .nav-links {
         position: fixed;
+        display: flex;
         top: 0;
         left: 0;
         height: 100%;
