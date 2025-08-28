@@ -111,10 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Funcionalidade do menu hamburger
     const menuToggle = document.getElementById("mobile-menu");
     const navLinks = document.querySelector(".nav-links");
+    const body = document.body;
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("active");
         menuToggle.classList.toggle("open");
+        body.classList.toggle('menu-active');
     });
 
 

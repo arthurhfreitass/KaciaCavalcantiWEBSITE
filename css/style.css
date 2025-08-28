@@ -32,15 +32,16 @@ h1, h2, h3, h4 {
 /* Estilo do Cabeçalho e Introdução */
 .hero-section {
     position: relative;
-    height: 100vh; /* Altura total da tela */
-    background-image: url('../images/capa-maquiagem_preta.jpg'); /* Adicione o caminho da sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 100vh;
+    background-image: url('../images/capa-maquiagem_preta.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    transition: filter 0.5s ease-in-out; 
 }
 .hero-section::after {
     content: '';
@@ -737,6 +738,9 @@ h1, h2, h3, h4 {
     /* ======================== */
     /* Hero responsivo */
     /* ======================== */
+    body.menu-active .hero-section {
+        filter: blur(5px);
+    }
     .hero-content {
         padding: 120px 20px 60px;
         text-align: center;
