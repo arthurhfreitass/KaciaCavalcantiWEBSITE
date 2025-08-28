@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Kacia Cavalcanti</title>
+    <title> Kacia Cavalcanti</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/images/logo_circula.jpg">
     
     <style>
         /* Estilos Gerais */
-        @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -34,7 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px 25px;
+            padding: 10px 50px;
         }
 
         .logo a {
@@ -42,7 +40,7 @@
             font-size: 2em;
             font-weight: 700;
             text-decoration: none;
-            color: #fffffc;
+            color: #5e4c3a; 
         }
 
         .nav-links {
@@ -67,9 +65,31 @@
             font-weight: 500;
         }
 
+        /* Título e Subtítulo - Estrutura Centralizada */
+        .portfolio-header {
+            text-align: center;
+            padding: 50px 0 20px; /* Espaço maior no topo */
+        }
+        
+        .portfolio-name {
+            font-family: 'Tangerine', cursive;
+            font-size: 4em;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .portfolio-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Galeria de Trabalhos */
         .gallery-section {
-            padding: 50px;
+            padding: 0 50px 50px;
         }
 
         .portfolio-grid {
@@ -85,9 +105,91 @@
             display: block;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        /* Estilo da Galeria Modal */
+/* Estilo da Galeria Modal */
+        .modal {
+            display: none; /* A modal estará oculta por padrão */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            
+            /* Centraliza a modal vertical e horizontalmente quando ela for exibida */
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Footer */
+        .modal-content {
+            position: relative;
+            background-color: #ffffff; /* Fundo branco para a caixa da imagem */
+            margin: 15px; /* Adiciona um espaço para não grudar nas bordas da tela */
+            padding: 10px; /* Adiciona uma borda branca ao redor da imagem */
+            max-width: 90%; /* Limita a largura para telas grandes */
+            max-height: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px; /* Cantos arredondados */
+            text-align: center; /* Centraliza o texto, se houver */
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 80vh; /* Limita a altura da imagem à 80% da altura da tela */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .close {
+            color: #f1f1f1;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); /* Centraliza verticalmente */
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            text-decoration: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Rodapé */
         .footer {
             background-color: #333;
             color: #fff;
@@ -108,50 +210,25 @@
             color: #fff;
             font-size: 1.5em;
         }
-        .portfolio-name-section {
-            width: 100%;
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        .portfolio-name {
-            font-family: 'Tangerine', cursive; /* A nova fonte que você escolheu */
-            font-size: 4em;
-            font-weight: 400;
-            margin: 0;
-        }
-        .portfolio-subtitle {
-            text-align: center;
-            font-size: 1.2em; /* Tamanho da fonte para o subtítulo */
-            color: #555; /* Uma cor um pouco mais clara para o texto */
-            margin-top: 10px; /* Espaçamento entre o título e o subtítulo */
-            max-width: 600px; /* Limita a largura do texto para ele não ficar muito esticado */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
+        
         /* Responsividade */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             .nav-links {
                 flex-direction: column;
                 width: 100%;
                 display: none;
             }
-            
             .nav-links.active {
                 display: flex;
             }
-
             .menu-toggle {
                 display: block;
                 cursor: pointer;
             }
-            
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -184,23 +261,25 @@
         </nav>
     </header>
 
-    <section class="portfolio-name-section">
-        <h2 class="portfolio-name">Portifolio</h2>
-        <p class="portfolio-subtitle">Algumas clientes produzidas por mim, para diversos eventos:</p>
-    </section>
+    <main>
+        <section class="portfolio-header">
+            <h1 class="portfolio-name">Portifolio</h1>
+            <p class="portfolio-subtitle">Algumas clientes produzidas por mim, para diversos eventos:</p>
+        </section>
 
-    <section id="galeria" class="gallery-section">
-        <div class="portfolio-grid">
-            <div class="portfolio-item"><img src="images/portifolio/por1.png" alt="Foto de portfólio 1"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por2.png" alt="Foto de portfólio 2"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por3.png" alt="Foto de portfólio 3"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por4.png" alt="Foto de portfólio 4"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por5.png" alt="Foto de portfólio 5"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por6.png" alt="Foto de portfólio 6"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por7.png" alt="Foto de portfólio 7"></div>
-            <div class="portfolio-item"><img src="images/portifolio/por8.png" alt="Foto de portfólio 8"></div>
-        </div>
-    </section>
+        <section id="galeria" class="gallery-section">
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="images/portifolio/por1.png" alt="Foto de portfólio 1"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por2.png" alt="Foto de portfólio 2"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por3.png" alt="Foto de portfólio 3"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por4.png" alt="Foto de portfólio 4"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por5.png" alt="Foto de portfólio 5"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por6.png" alt="Foto de portfólio 6"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por7.png" alt="Foto de portfólio 7"></div>
+                <div class="portfolio-item"><img src="images/portifolio/por8.png" alt="Foto de portfólio 8"></div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <p class="footer-text">&copy; 2025 Kacia Cavalcanti. Todos os direitos reservados.</p>
@@ -223,6 +302,15 @@
         </ul>
     </footer>
 
-    <script src="js/script.js"></script>
+    <div id="myModal" class="modal">
+        <span class="close cursor">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script src="js/script_portifolio.js"></script>
 </body>
 </html>
