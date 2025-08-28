@@ -41,7 +41,6 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition: filter 0.5s ease-in-out; 
 }
 .hero-section::after {
     content: '';
@@ -693,6 +692,8 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
+        position: relative;
+        z-index: 100
     }
 
     /* Botão hamburguer visível apenas no mobile */
@@ -738,9 +739,21 @@ h1, h2, h3, h4 {
     /* ======================== */
     /* Hero responsivo */
     /* ======================== */
-    body.menu-active .hero-section {
-        filter: blur(5px);
+    body.menu-active {
+        overflow: hidden; /* Impede o scroll do conteúdo do fundo */
     }
+
+    body.menu-active .hero-section > *:not(.navbar),
+    body.menu-active .about-me-section,
+    body.menu-active .services-section,
+    body.menu-active .gallery-section,
+    body.menu-active .contact-section,
+    body.menu-active .footer {
+        filter: blur(5px);
+        transition: filter 0.5s ease-in-out;
+        pointer-events: none; /* Desativa cliques nos elementos desfocados */
+    }
+
     .hero-content {
         padding: 120px 20px 60px;
         text-align: center;
