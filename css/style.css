@@ -73,6 +73,7 @@ h1, h2, h3, h4 {
 
 .navbar ul {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -686,6 +687,10 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+    }
     }
 
     /* Botão hamburguer visível apenas no mobile */
