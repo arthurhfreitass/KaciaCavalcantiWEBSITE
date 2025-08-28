@@ -52,7 +52,13 @@ h1, h2, h3, h4 {
     background-color: rgba(0, 0, 0, 0.5); /* Overlay preto semi-transparente */
     z-index: 1;
 }
-
+.nav-links {
+    list-style: none;
+    display: flex; /* Agora a regra está na classe correta */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
 /* Navegação */
 .navbar {
     display: flex;
