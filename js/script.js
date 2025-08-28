@@ -108,21 +108,27 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(whatsappUrl, '_blank');
         });
     }
-// Funcionalidade do menu hamburger
-    const menuToggle = document.getElementById("mobile-menu");
-    const navLinks = document.querySelector(".nav-links");
+    // Funcionalidade do menu hamburger
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        menuToggle.classList.toggle("open");
+    // Função para abrir/fechar o menu
+    function toggleMenu() {
+        navLinks.classList.toggle('active');
         body.classList.toggle('menu-active');
-    });
+    }
+
+    // Adiciona o evento de clique ao botão hamburger
+    mobileMenu.addEventListener('click', toggleMenu);
+
     // Fecha o menu ao clicar em um link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            body.classList.remove('menu-active');
+            if (navLinks.classList.contains('active')) {
+                toggleMenu(); // Chama a função para fechar o menu
+            }
+        });
     });
 
 
