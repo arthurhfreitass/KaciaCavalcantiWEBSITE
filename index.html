@@ -8,10 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
 </head>
 <body>
 <header class="hero-section">
@@ -19,21 +16,25 @@
         <div class="logo">
             <a href="#">Kacia Cavalcanti<br>BEAUTY</a>
         </div>
+
+        <!-- Botão Hamburguer -->
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+
+        <!-- Links de Navegação -->
         <ul class="nav-links">
             <li><a href="#sobre">Sobre</a></li>
-            <li class="dropdown">
-                <a href="#servicos">Serviços</a>
-            </li>
+            <li><a href="#servicos">Serviços</a></li>
             <li><a href="#galeria">Trabalhos</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="https://wa.me/558197484651" class="nav-button">Agendar</a></li>
         </ul>
     </nav>
+
+    <!-- Conteúdo Hero -->
     <div class="hero-content">
         <h1>MAQUIAGEM</h1>
         <p>Maquiagem para diversas ocasiões como Social, Formaturas, Debutantes, Festas e Eventos, Casual/Social, Ensaios Fotográficos, entre outras ocasiões.</p>
@@ -44,43 +45,37 @@
     </div>
 </header>
 
-    <section class="about-me-detail">
-        <div class="about-me-container">
-            <h2>
-                <span class="italic-title">Kacia Cavalcanti</span>
-            </h2>
-            <p>
-                <span class="bold-text">Kacia Cavalcanti</span> é maquiadora especialista em noivas e atendimento social para as mais variadas ocasiões. Com atendimento para produção completa de beleza, com maquiagem e penteado.
-            </p>
-            <p>Focado na elegância e sofisticação, para clientes de bom gosto.</p>
-            <p>
-                Com mais de uma década de atuação na área, uma profissional reconhecida como uma das melhores maquiadoras de Sorocaba/SP, Região e Estado de São Paulo.
-            </p>
-            <p>
-                Em meu atelier/estúdio de maquiagem e penteado, você receberá um atendimento qualificado, voltado a trazer sua melhor versão, para que sinta-se linda e incrível, seja qual for a sua ocasião.
-            </p>
+<!-- Seções abaixo (Sobre, Serviços, Galeria, Contato, Footer) -->
+<section id="sobre" class="about-me-detail">
+    <div class="about-me-container">
+        <h2><span class="italic-title">Kacia Cavalcanti</span></h2>
+        <p><span class="bold-text">Kacia Cavalcanti</span> é maquiadora especialista em noivas e atendimento social para as mais variadas ocasiões. Com atendimento para produção completa de beleza, com maquiagem e penteado.</p>
+        <p>Focado na elegância e sofisticação, para clientes de bom gosto.</p>
+        <p>Com mais de uma década de atuação na área, uma profissional reconhecida como uma das melhores maquiadoras de Sorocaba/SP, Região e Estado de São Paulo.</p>
+        <p>Em meu atelier/estúdio de maquiagem e penteado, você receberá um atendimento qualificado, voltado a trazer sua melhor versão, para que sinta-se linda e incrível, seja qual for a sua ocasião.</p>
+    </div>
+</section>
+
+<section id="servicos" class="services-section">
+    <h2 class="section-title-italic">Serviços</h2>
+    <div class="services-container">
+        <div class="service-item">
+            <img src="images/pincel.png" alt="Ícone de maquiagem">
+            <h3>Maquiagem Social</h3>
+            <p>Maquiagem para diversas ocasiões como Social, Formaturas, Debutantes, Festas e Eventos, Casual/Social, Ensaios Fotográficos, entre outras ocasiões.</p>
         </div>
-    </section>
-    <section id="servicos" class="services-section">
-        <h2 class="section-title-italic">Serviços</h2>
-            <div class="services-container">
-                <div class="service-item">
-                    <img src="images/pincel.png" alt="Ícone de maquiagem">
-                    <h3>Maquiagem Social</h3>
-                    <p>Maquiagem para diversas ocasiões como Social, Formaturas, Debutantes, Festas e Eventos, Casual/Social, Ensaios Fotográficos, entre outras ocasiões.</p>
-                </div>
-                <div class="service-item">
-                    <img src="images/mala-de-viagem.png" alt="Ícone para noivas">
-                    <h3>Noivas</h3>
-                    <p>Produção de Beleza completa com Maquiagem e Penteado para Noivas, Madrinhas e Convidados de Casamento.</p>
-                </div>
-                <div class="service-item">
-                    <img src="images/pincel.png" alt="Ícone para noivas">
-                    <h3>Artisticas</h3>
-                    <p>Dia da Noiva com pacotes de Maquiagem e Penteado, além de toda assessoria, incluindo retoque, colocação de vestido e outros detalhes.</p>
-                </div>
-            </div>
-        </section>
+        <div class="service-item">
+            <img src="images/mala-de-viagem.png" alt="Ícone para noivas">
+            <h3>Noivas</h3>
+            <p>Produção de Beleza completa com Maquiagem e Penteado para Noivas, Madrinhas e Convidados de Casamento.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/pincel.png" alt="Ícone artístico">
+            <h3>Artísticas</h3>
+            <p>Dia da Noiva com pacotes de Maquiagem e Penteado, além de toda assessoria, incluindo retoque, colocação de vestido e outros detalhes.</p>
+        </div>
+    </div>
+</section>
 
 <section id="galeria" class="gallery-section">
     <h2 class="section-title-italic">Galeria</h2>
@@ -90,12 +85,10 @@
             <img src="images/social.png" alt="Capa Maquiagem Social">
             <h3>Maquiagem Social</h3>
         </div>
-
         <div class="category-card" data-category="noivas">
             <img src="images/noiva.png" alt="Capa Maquiagem para Noivas">
             <h3>Noivas</h3>
         </div>
-
         <div class="category-card" data-category="artisticas">
             <img src="images/artistca.png" alt="Capa Maquiagem Artística">
             <h3>Artísticas</h3>
@@ -103,61 +96,43 @@
     </div>
 </section>
 
-<div id="gallery-modal" class="modal">
-    <span class="close-button">&times;</span>
-    <div class="modal-content">
+<section id="contato" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-details">
+            <h2 class="section-title-italic">Contato</h2>
+            <div class="contact-item"><p class="contact-text">Telefone: (81) 9748-4651</p></div>
+            <div class="contact-item"><p class="contact-text">WhatsApp: (81) 9748-4651</p><a href="https://wa.me/558197484651" target="_blank" class="contact-link">Enviar mensagem no WhatsApp</a></div>
+            <div class="contact-item"><p class="contact-text">E-mail: kaciacavalcanti@beauty.com</p></div>
         </div>
-</div>
-
-    <section id="contato" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-details">
-                <h2 class="section-title-italic">Contato</h2>
-                <div class="contact-item">
-                    <p class="contact-text">Telefone: (81) 9748-4651</p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-text">WhatsApp: (81) 9748-4651</p>
-                    <a href="https://wa.me/558197484651" target="_blank" class="contact-link">Enviar mensagem no WhatsApp</a>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-text">E-mail: kaciacavalcanti@beauty.com</p>
-                </div>
-            </div>
-
-            <div class="contact-form-container">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu E-mail" required>
-                    <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
+        <div class="contact-form-container">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
         </div>
-    </section>
-    <button id="scrollToTopBtn" title="Voltar ao topo">
-        <img src="images/cima.png" alt="Seta para cima">
-    </button>
-    <footer class="footer">
-        <p class="footer-text">&copy; 2025 Kacia Cavalcanti. Todos os direitos reservados.</p>
-        <ul class="social-links">
-            <li>
-                <a href="https://www.instagram.com/kaciacavalcantibeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    <i class="fab fa-instagram icon"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://wa.me/558197484651" target="_blank">
-                    <i class="fab fa-whatsapp icon"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:kaciacavalcanti@beauty.com" target="_blank">
-                    <i class="fas fa-envelope icon"></i>
-                </a>
-            </li>
-        </ul>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-text">&copy; 2025 Kacia Cavalcanti. Todos os direitos reservados.</p>
+    <ul class="social-links">
+        <li><a href="https://www.instagram.com/kaciacavalcantibeauty" target="_blank"><i class="fab fa-instagram icon"></i></a></li>
+        <li><a href="https://wa.me/558197484651" target="_blank"><i class="fab fa-whatsapp icon"></i></a></li>
+        <li><a href="mailto:kaciacavalcanti@beauty.com" target="_blank"><i class="fas fa-envelope icon"></i></a></li>
+    </ul>
+</footer>
+
+<!-- Script -->
+<script>
+const menuToggle = document.getElementById("mobile-menu");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+});
+</script>
 </body>
 </html>
