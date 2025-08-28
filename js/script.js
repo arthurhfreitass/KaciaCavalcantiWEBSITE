@@ -118,6 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.toggle("open");
         body.classList.toggle('menu-active');
     });
+    // Fecha o menu ao clicar em um link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            body.classList.remove('menu-active');
+    });
 
 
 });
