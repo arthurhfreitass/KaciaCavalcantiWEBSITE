@@ -689,6 +689,43 @@ h1, h2, h3, h4 {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
+/* Estilos para o serviço */
+.services-section .service-item {
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Transição para o movimento */
+}
+/* Remove a linha de baixo e garante a cor correta do link */
+.services-section .service-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* Efeito de hover */
+.services-section .service-link:hover .service-item {
+    transform: translateY(-5px); /* Move o item sutilmente para cima */
+}
+
+/* Efeito de realce para o texto e ícone no hover */
+.services-section .service-link:hover h3,
+.services-section .service-link:hover p,
+.services-section .service-link:hover img {
+    color: #c9a05b; /* Muda a cor do texto para dourado */
+    filter: brightness(1.2) drop-shadow(0 0 5px #c9a05b); /* Adiciona um brilho sutil ao ícone e texto */
+    transform: scale(1.05); /* Aumenta o tamanho levemente */
+}
+
+/* Garante a transição suave dos elementos */
+.services-section .service-link img,
+.services-section .service-link h3,
+.services-section .service-link p {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+/* Efeito de destaque ao passar o mouse */
+.gallery-categories .category-card:hover {
+    box-shadow: 0 0 15px rgba(201, 160, 91, 0.8); /* Sombra dourada suave */
+    transform: scale(1.05); /* Aumenta o tamanho do card levemente */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 
 /* ======================== */
 /* Menu Mobile (até 768px) */
@@ -780,6 +817,14 @@ h1, h2, h3, h4 {
         flex-direction: column;
         gap: 12px;
         align-items: center;
+    }
+    .gallery-photos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery-photos img {
+        max-width: 100%;
     }
 }
 
