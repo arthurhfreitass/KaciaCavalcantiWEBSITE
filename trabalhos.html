@@ -20,6 +20,7 @@
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
+            padding-top: 100px;
         }
 
         /* Header */
@@ -32,21 +33,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 50px;
+            /* Reduz o padding para diminuir a altura da barra */
+            padding: 10px 20px; /* Reduzi de 20px para 10px, o que deve deixá-la mais compacta */
+            z-index: 100;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #c2beb6;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar li {
+            margin-left: 15px; /* Reduzi o espaçamento para deixar os botões mais próximos */
+        }
+        /* Estilos para o logo */
+        .navbar .logo a {
+            /* Remove os estilos de texto */
+            font-family: inherit;
+            font-weight: normal;
+            font-size: 1em;
         }
 
-        .logo a {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            font-weight: 700;
-            text-decoration: none;
-            color: #5e4c3a; 
+        .navbar .logo img {
+            /* Define o tamanho da imagem da logo */
+            height: 100px; /* Altura fixa, ajuste conforme necessário */
+            width: auto; /* Mantém a proporção */
         }
-
+/* ... (O restante do seu CSS) ... */
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 30px;  
             margin: 0;
             padding: 0;
         }
@@ -239,7 +256,9 @@
     <header class="hero-section">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Kacia Cavalcanti<br>BEAUTY</a>
+                <a href="index.html">
+                    <img src="images/logo-principal.jpg" alt="Kacia Cavalcanti Beauty">
+                </a>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -249,12 +268,6 @@
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="index.html#sobre">Sobre</a></li>
-                <li class="dropdown">
-                    <a href="index.html#servicos">Serviços</a>
-                    <div class="dropdown-content">
-                    </div>
-                </li>
-                <li><a href="#">Trabalhos</a></li>
                 <li><a href="index.html#contato">Contato</a></li>
                 <li><a href="https://wa.me/558197484651" class="nav-button">Agendar</a></li>
             </ul>
