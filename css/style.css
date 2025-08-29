@@ -744,10 +744,11 @@ h1, h2, h3, h4 {
 }
 /* Estilo da linha divisória entre as seções */
 .section-divider {
+    display: none; /* Inicia escondida por padrão */
     border: none;
-    border-top: 1px solid #dcdcdc; /* Uma linha sólida de 1 pixel em cinza claro */
-    width: 80%; /* Ocupa 80% da largura da tela */
-    margin: 40px auto; /* Centraliza a linha e adiciona espaçamento superior e inferior */
+    border-top: 1px solid #dcdcdc;
+    width: 80%;
+    margin: 40px auto;
 }
 
 
@@ -821,6 +822,9 @@ h1, h2, h3, h4 {
         filter: blur(5px);
         transition: filter 0.5s ease-in-out;
         pointer-events: none; /* Desativa cliques nos elementos desfocados */
+    }
+    .section-divider {
+        display: block; /* Exibe a linha apenas quando a tela for de no máximo 768px */
     }
 
     /* Seção Hero */
