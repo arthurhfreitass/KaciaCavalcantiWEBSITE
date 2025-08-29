@@ -725,6 +725,31 @@ h1, h2, h3, h4 {
     transform: scale(1.05); /* Aumenta o tamanho do card levemente */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+/* Adicione este código à sua seção <style> */
+.learn-more-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 15px;
+    background-color: #c9a781;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #b38e6e;
+}
+/* Estilo da linha divisória entre as seções */
+.section-divider {
+    border: none;
+    border-top: 1px solid #dcdcdc; /* Uma linha sólida de 1 pixel em cinza claro */
+    width: 80%; /* Ocupa 80% da largura da tela */
+    margin: 40px auto; /* Centraliza a linha e adiciona espaçamento superior e inferior */
+}
+
 
 
 /* ======================== */
@@ -760,6 +785,7 @@ h1, h2, h3, h4 {
         display: none; /* escondido por padrão */
         z-index: 1000;
     }
+    
 
     .nav-links.active {
         display: flex; /* mostra quando o menu é ativado */

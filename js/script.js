@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
-        // Funcionalidade do formulário de contato para WhatsApp
+    // Funcionalidade do formulário de contato para WhatsApp
     const contactForm = document.querySelector('.contact-form-container form');
 
     if (contactForm) {
@@ -130,9 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-
 });
-
-
-
