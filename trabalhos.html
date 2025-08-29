@@ -13,6 +13,7 @@
     
     <style>
         /* Estilos Gerais */
+        /* Estilos Gerais */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -20,7 +21,7 @@
             background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
-            padding-top: 100px;
+            padding-top: 80px; /* Espaço para a navbar fixa */
         }
 
         /* Header */
@@ -29,12 +30,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        /* Barra de Navegação */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /* Reduz o padding para diminuir a altura da barra */
-            padding: 10px 20px; /* Reduzi de 20px para 10px, o que deve deixá-la mais compacta */
+            padding: 10px 50px;
             z-index: 100;
             width: 100%;
             position: fixed;
@@ -42,28 +43,25 @@
             left: 0;
             background-color: #c2beb6;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .navbar li {
-            margin-left: 15px; /* Reduzi o espaçamento para deixar os botões mais próximos */
-        }
-        /* Estilos para o logo */
-        .navbar .logo a {
-            /* Remove os estilos de texto */
-            font-family: inherit;
-            font-weight: normal;
-            font-size: 1em;
+            box-sizing: border-box; /* Garante que padding não adicione largura */
         }
 
         .navbar .logo img {
-            /* Define o tamanho da imagem da logo */
-            height: 100px; /* Altura fixa, ajuste conforme necessário */
-            width: auto; /* Mantém a proporção */
+            height: 80px; /* Altura da logo */
+            width: auto;
+            display: block;
         }
-/* ... (O restante do seu CSS) ... */
+
+        .nav-right-side {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px;  
+            gap: 20px;
             margin: 0;
             padding: 0;
         }
@@ -72,6 +70,7 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .nav-button {
@@ -80,14 +79,22 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
         }
 
-        /* Título e Subtítulo - Estrutura Centralizada */
+        .nav-button.mobile-show,
+        .mobile-nav-right,
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Título e Subtítulo */
         .portfolio-header {
             text-align: center;
-            padding: 50px 0 20px; /* Espaço maior no topo */
+            padding: 50px 0 20px;
         }
-        
+
         .portfolio-name {
             font-family: 'Tangerine', cursive;
             font-size: 4em;
@@ -124,11 +131,10 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
         }
-        
+
         /* Estilo da Galeria Modal */
-/* Estilo da Galeria Modal */
         .modal {
-            display: none; /* A modal estará oculta por padrão */
+            display: none;
             position: fixed;
             z-index: 100;
             left: 0;
@@ -137,27 +143,25 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.9);
-            
-            /* Centraliza a modal vertical e horizontalmente quando ela for exibida */
             align-items: center;
             justify-content: center;
         }
 
         .modal-content {
             position: relative;
-            background-color: #ffffff; /* Fundo branco para a caixa da imagem */
-            margin: 15px; /* Adiciona um espaço para não grudar nas bordas da tela */
-            padding: 10px; /* Adiciona uma borda branca ao redor da imagem */
-            max-width: 90%; /* Limita a largura para telas grandes */
+            background-color: #ffffff;
+            margin: 15px;
+            padding: 10px;
+            max-width: 90%;
             max-height: 90%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px; /* Cantos arredondados */
-            text-align: center; /* Centraliza o texto, se houver */
+            border-radius: 8px;
+            text-align: center;
         }
 
         .modal-content img {
             max-width: 100%;
-            max-height: 80vh; /* Limita a altura da imagem à 80% da altura da tela */
+            max-height: 80vh;
             display: block;
             margin: 0 auto;
         }
@@ -184,7 +188,7 @@
             cursor: pointer;
             position: absolute;
             top: 50%;
-            transform: translateY(-50%); /* Centraliza verticalmente */
+            transform: translateY(-50%);
             width: auto;
             padding: 16px;
             color: white;
@@ -227,29 +231,61 @@
             color: #fff;
             font-size: 1.5em;
         }
-        
+
         /* Responsividade */
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column;
-                align-items: flex-start;
+                padding: 10px 15px;
             }
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
+
+            .nav-right-side {
                 display: none;
             }
+
+            .mobile-nav-right {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #c2beb6;
+                padding: 10px;
+                box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            
             .nav-links.active {
                 display: flex;
             }
+            
             .menu-toggle {
                 display: block;
                 cursor: pointer;
             }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+            
+            .nav-button.mobile-show {
+                display: block;
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+            
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+
     </style>
 </head>
 <body>
@@ -260,17 +296,23 @@
                     <img src="images/logo-principal.jpg" alt="Kacia Cavalcanti Beauty">
                 </a>
             </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-right-side">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <a href="https://wa.me/558197484651" class="nav-button desktop-show">Agendar</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="https://wa.me/558197484651" class="nav-button">Agendar</a></li>
-            </ul>
+
+            <div class="mobile-nav-right">
+                <a href="https://wa.me/558197484651" class="nav-button mobile-show">Agendar</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </nav>
     </header>
 
